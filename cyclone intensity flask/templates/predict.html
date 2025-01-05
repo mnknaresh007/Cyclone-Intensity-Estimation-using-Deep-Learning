@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyclone Intensity Prediction Using DeepLearning</title>
+    <link rel='stylesheet' href={{url_for('static' , filename = 'css/style.css')}}>
+</head>
+<body>
+     <header>
+         <h1>Cyclone Intensity Prediction</h1>
+         <nav>
+             <ul>
+                 <li><a href="/">Home</a></li>
+                 <li><a href="/about">About</a></li>
+                 <li><a href="/predict">Prediction</a></li>
+             </ul>
+         </nav>
+     </header>
+     <main>
+    <h1>Cyclone Prediction</h1>
+    <form id="upload-form" method="POST" action="/predict" enctype="multipart/form-data">
+        <input type="file" name="file" id="file">
+        <button type="submit">Predict</button>
+    </form>
+    <div id="image-container">
+        {% if prediction %}
+            <img src="{{ url_for('static', filename='uploads/' + image_filename) }}" alt="Uploaded Image" style="max-width: 200px;">
+        {% endif %}
+     </div>
+     <div id="result">
+        {% if prediction %}
+            <p><h1>Intensity of cyclone: {{ prediction }}</h1></p>
+        {% endif %}
+     </div>
+     </main>
+     <footer>
+         <p>&copy; 2024 Cyclone Intensity Prediction Platform. All rights reserved.</p>
+     </footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('static/images/bgimage.jpg');
+    background-size: cover; /* Optional: Cover the entire background */
+    background-position: center; 
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex; /* Use flexbox to align items */
+    justify-content: space-between; /* Distribute items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    font-size:18px;
+    text-transform: uppercase;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Align the list to the right */
+nav {
+    margin-right: 5px;
+}
+
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#upload-form,
+#image-container,
+#result {
+   margin-top: 20px;
+   text-align: center;
+}
+
+main {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            height: 100vh;
+        }
+#image-preview {
+    margin-top: 20px; /* Add margin to the top */
+}
+
+#about {
+            text-align: left;
+            margin-left: 20px; /* Adjust the margin as needed */
+        }
+
+        #about h2 {
+            margin-top: 30px; /* Adjust the margin as needed */
+        }
